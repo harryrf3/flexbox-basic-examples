@@ -1,0 +1,219 @@
+/* 
+  **************************************************
+  * Flex Container Properties                      *
+  **************************************************
+  * flex-direction
+  * flex-wrap
+  * flex-flow
+  * justify-content
+  * align-items
+  * align-content
+  **************************************************
+  * Flex Item Properties                           *
+  **************************************************
+  * order
+  * flex-grow
+  * flex-shrink
+  * flex-basis
+  * align-self
+  **************************************************
+  * The Axes                                       *
+  **************************************************
+  * Row ********************************************
+  **************************************************
+  * Main Axis - flex-direction: row (horizontal)   *
+  * Cross Axis - flex-direction: row (vertical)    *
+  **************************************************
+  * Column *****************************************
+  **************************************************
+  * Main Axis - flex-direction: column (horizontal *
+  * Cross Axis - flex-direction: column (vertical) *
+  **************************************************
+*/
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.heading {
+  background-color: #1a1a1a;
+  color: #ccc;
+}
+
+.container {
+  display: flex;
+  background-color: #090909;
+  border: 2px solid #555;
+}
+
+.item {
+  width: 100px;
+  height: 100px;
+  /* css blue */
+  background: #254ed4;
+  color: #fff;
+  margin: 10px;
+}
+
+
+/* JUSTIFY CONTENT */
+
+.container__justify__end {
+  justify-content: end;
+}
+
+.container__justify__start {
+  justify-content: start;
+}
+
+.container__justify__center {
+  justify-content: center;
+}
+
+.container__justify__space-around {
+  justify-content: space-around;
+}
+
+.container__justify__space-between {
+  justify-content: space-between;
+}
+
+.container__justify__space-evenly {
+  justify-content: space-evenly;
+}
+
+
+/* ALIGN ITEMS */
+
+.container__align-items__center {
+  height: 400px;
+  justify-content: space-around;
+  align-items: center;
+}
+
+
+/* ALIGN SELF */
+
+.container__align-self {
+  height: 400px;
+  justify-content: space-evenly;
+}
+
+.container__item__align-self__end {
+  align-self: end;
+}
+
+.container__item__align-self__center {
+  align-self: center;
+}
+
+.container__item__align-self__start {
+  align-self: start;
+}
+
+
+/* FLEX DIRECTION */
+
+.container__flex-direction__column {
+  height: 400px;
+  flex-direction: column;
+  /* Always represents Main Axis */
+  justify-content: space-evenly;
+  /* Always represents Cross Axis */
+  align-items: flex-start;
+}
+
+.container__flex-direction__row {
+  height: 400px;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+
+/* CENTERING ELEMENTS */
+
+.item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* FLEX WRAP */
+
+.container__flex-wrap__wrap {
+  flex-wrap: wrap;
+}
+
+
+/* ORDER */
+
+.container__order__item__one {
+  order: 1;
+}
+
+.container__order__item__two {
+  order: 3;
+}
+
+.container__order__item__three {
+  order: 2;
+}
+
+
+/* FLEX BASIS */
+
+.item .container__flex-basis__item__one,
+.item .container__flex-basis__item__three {
+  flex-basis: 150px;
+}
+
+.container__flex-basis__item__two {
+  flex-basis: 400px;
+}
+
+/* Flex Grow */
+
+.container__flex-grow__item__one,
+.container__flex-grow__item__three {
+  flex-grow: 1;
+}
+
+.container__flex-grow__item__two {
+  flex-grow: 2;
+}
+
+
+/* FLEX SHRINK */
+
+.shrink {
+  flex-basis: 300px;
+}
+
+.container__flex-shrink__item__one {
+  flex-shrink: 1;
+}
+
+.container__flex-shrink__item__two {
+  flex-shrink: 3;
+}
+
+.container__flex-shrink__item__three {
+  flex-shrink: 2;
+}
+
+
+/* FLEX PROPERTY */
+
+.container__flex__item {
+  /* <'grow'><'shrink'><basis> */
+  flex: 1;
+}
